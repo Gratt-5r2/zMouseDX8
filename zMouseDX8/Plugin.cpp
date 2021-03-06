@@ -51,17 +51,23 @@ namespace NAMESPACE {
 
   void TRealMousePosition::SetX( const float& v ) {
     x = v;
-    mouseState.xpos = (int)ceil( x );
+    int state = (int)ceil( x );
+    mouseState.xpos = state;
+    wrapperMouseState.xpos = state;
   }
 
   void TRealMousePosition::SetY( const float& v ) {
     y = v;
-    mouseState.xpos = (int)ceil( y );
+    int state = (int)ceil( y );
+    mouseState.ypos = state;
+    wrapperMouseState.ypos = state;
   }
 
   void TRealMousePosition::SetZ( const float& v ) {
     z = v;
-    mouseState.zpos = (int)ceil( z );
+    int state = (int)ceil( z );
+    mouseState.zpos = state;
+    wrapperMouseState.zpos = state;
   }
 
   float TRealMousePosition::GetX() {
@@ -137,21 +143,21 @@ namespace NAMESPACE {
         }
 
         DIPROPDWORD prop;
-        prop.diph.dwSize = sizeof( DIPROPDWORD );
+        prop.diph.dwSize       = sizeof( DIPROPDWORD );
         prop.diph.dwHeaderSize = sizeof( DIPROPHEADER );
-        prop.diph.dwObj = 0;
-        prop.diph.dwHow = DIPH_DEVICE;
-        prop.dwData = m_nBufferSize;
+        prop.diph.dwObj        = 0;
+        prop.diph.dwHow        = DIPH_DEVICE;
+        prop.dwData            = m_nBufferSize;
         if( m_lpDIMouse->SetProperty( DIPROP_BUFFERSIZE, &prop.diph ) != DI_OK ) {
           Message::Error( "#3: Input priority is not applied. Return original methods." );
           return false;
         }
 
-        prop.diph.dwSize = sizeof( DIPROPDWORD );
+        prop.diph.dwSize       = sizeof( DIPROPDWORD );
         prop.diph.dwHeaderSize = sizeof( DIPROPHEADER );
-        prop.diph.dwObj = 0;
-        prop.diph.dwHow = DIPH_DEVICE;
-        prop.dwData = DIPROPAXISMODE_REL;
+        prop.diph.dwObj        = 0;
+        prop.diph.dwHow        = DIPH_DEVICE;
+        prop.dwData            = DIPROPAXISMODE_REL;
         if( m_lpDIMouse->SetProperty( DIPROP_AXISMODE, &prop.diph ) != DI_OK ) {
           Message::Error( "#4: Input properties is not applied. Return original methods." );
           return false;
@@ -286,10 +292,17 @@ namespace NAMESPACE {
             smoothMouseState.SetY( (float)(int)data.dwData );
             break;
           case DIMOFS_Z:
-          {
             smoothMouseState.SetZ( (float)(int)data.dwData );
             break;
-          }
+          case DIMOFS_BUTTON0:
+            wrapperMouseState.buttonPressedLeft = IK_PRESS( data.dwData );
+            break;
+          case DIMOFS_BUTTON1:
+            wrapperMouseState.buttonPressedRight = IK_PRESS( data.dwData );
+            break;
+          case DIMOFS_BUTTON2:
+            wrapperMouseState.buttonPressedMid = IK_PRESS( data.dwData );
+            break;
         }
       }
       else if( elements == 0 ) done = True;
@@ -369,7 +382,9 @@ namespace NAMESPACE {
           }
           case DIMOFS_BUTTON0:
           {
-            mouseState.buttonPressedLeft = IK_PRESS( data.dwData );
+            int state = IK_PRESS( data.dwData );
+            mouseState.buttonPressedLeft = state;
+            wrapperMouseState.buttonPressedLeft = state;
 #if ENGINE != Engine_G1
             SetMouseKeyStateAndInsert( MOUSE_BUTTONLEFT, data.dwData );
 #endif
@@ -377,7 +392,9 @@ namespace NAMESPACE {
           }
           case DIMOFS_BUTTON1:
           {
-            mouseState.buttonPressedRight = IK_PRESS( data.dwData );
+            int state = IK_PRESS( data.dwData );
+            mouseState.buttonPressedRight = state;
+            wrapperMouseState.buttonPressedRight = state;
 #if ENGINE != Engine_G1
             SetMouseKeyStateAndInsert( MOUSE_BUTTONRIGHT, data.dwData );
 #endif
@@ -385,7 +402,9 @@ namespace NAMESPACE {
           }
           case DIMOFS_BUTTON2:
           {
-            mouseState.buttonPressedMid = IK_PRESS( data.dwData );
+            int state = IK_PRESS( data.dwData );
+            mouseState.buttonPressedMid = state;
+            wrapperMouseState.buttonPressedMid = state;
 #if ENGINE != Engine_G1
             SetMouseKeyStateAndInsert( MOUSE_BUTTONMID, data.dwData );
 #endif

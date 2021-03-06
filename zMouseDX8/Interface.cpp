@@ -5,8 +5,24 @@
 #pragma comment(lib, "C:\\ProgramData\\Union\\SDK\\DirectX8\\lib\\dinput8.lib")
 
 #define DIRECTINPUT_VERSION 0x0800
+#define DllExport __declspec(dllexport)
 #define IK_PRESS(dw) ((dw & 0x80) == 0x80)
 #include <DirectX8\include\dinput.h>
+
+
+
+EXTERN_C {
+  struct zTWrapperMouseState {
+    int xpos;
+    int ypos;
+    int zpos;
+    int buttonPressedLeft;
+    int buttonPressedMid;
+    int buttonPressedRight;
+  };
+
+  DllExport zTWrapperMouseState wrapperMouseState;
+}
 
 
 
