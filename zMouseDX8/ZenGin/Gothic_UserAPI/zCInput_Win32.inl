@@ -6,3 +6,4 @@
 void SetDeviceEnabled_Union( zTInputDevice, int );
 void GetMousePos_Union( float &, float &, float & );
 void ProcessInputEvents_Union();
+int SetState_Union( unsigned short, int );

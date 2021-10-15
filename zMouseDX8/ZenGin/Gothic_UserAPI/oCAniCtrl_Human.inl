@@ -3,3 +3,4 @@
 // User API for oCAniCtrl_Human
 // Add your methods here
 
+float oCAniCtrl_Human::Turn_Union( float dir, int playani );

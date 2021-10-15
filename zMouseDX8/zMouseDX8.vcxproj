@@ -142,71 +142,71 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MP Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='G2A Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='G2 Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='G1A Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='G1 Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MP Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='G2A Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='G2 Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='G1A Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='G1 Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;$(ALLUSERSPROFILE)\Union\SDK\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\ZenGin\Gothic_UserAPI\;$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Include\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\include\;C:\ProgramData\Union\SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Lib\;$(ALLUSERSPROFILE)\Union\SDK\DirectX7\Lib\;C:\ProgramData\Union\SDK;$(LibraryPath)</LibraryPath>
     <TargetName>zMouseFix</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MP Debug|Win32'">
@@ -226,7 +226,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -250,7 +250,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -274,7 +274,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -298,7 +298,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -322,7 +322,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -350,7 +350,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -378,7 +378,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -406,7 +406,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -434,7 +434,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -462,7 +462,7 @@
       <ProgramDatabaseFile>$(SolutionDir)PDB\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0i\Build\beforebuild.exe $(SolutionDir)</Command>
+      <Command>$(ALLUSERSPROFILE)\Union\SDK\Union\v1.0k\Build\beforebuild.exe $(SolutionDir)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -471,6 +471,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DllMain.cpp" />
+    <ClInclude Include="Exception.cpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="MouseState\MouseState.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="MouseState\MouseState.cpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Plugin.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="ZenGin\Gothic_II_Addon\classDef_Ver3.cpp" />
@@ -487,6 +499,30 @@
     <ClInclude Include="Headers.h" />
     <ClInclude Include="Sources.h" />
     <ClInclude Include="UnionAfx.h" />
+    <ClInclude Include="Wrapper\Wrapper.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper.cpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper_AxisOnly.cpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper_Init.cpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper_Raw.cpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper_Steam.cpp">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ZenGin\Gothic_II_Addon\API\oAiHuman.h" />
     <ClInclude Include="ZenGin\Gothic_II_Addon\API\oAiShoot.h" />
     <ClInclude Include="ZenGin\Gothic_II_Addon\API\oAniCtrl.h" />

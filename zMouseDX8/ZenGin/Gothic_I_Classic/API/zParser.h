@@ -263,6 +263,8 @@ namespace Gothic_I_Classic {
     int FindInstanceVar( zSTRING& )                                                 zCall( 0x006F7040 );
     int GetLastInstance()                                                           zCall( 0x006F7220 );
     int FindIndex( zSTRING& )                                                       zCall( 0x006F7230 );
+    void DoEvent( const zSTRING& eventName );
+    int GetEventIndex( const zSTRING& eventName );
     static void SetVersion( unsigned char )                                         zCall( 0x006E3DA0 );
     static unsigned char GetVersion()                                               zCall( 0x006E3DB0 );
     static zCParser* GetParser()                                                    zCall( 0x006E4C90 );
@@ -274,6 +276,30 @@ namespace Gothic_I_Classic {
     // user API
     #include "zCParser.inl"
   };
+
+  inline void zCParser::DoEvent( const zSTRING& eventName ) {
+    int index = GetEventIndex( eventName );
+    if( index == Invalid )
+      return;
+
+    int indexSort = symtab.tablesort.Search( index );
+    while( true ) {
+      index = symtab.tablesort[++indexSort];
+      zCPar_Symbol* sym = GetSymbol( index );
+      if( sym == Null )
+        break;
+
+      if( !sym->name.HasWord( "EVENT." + eventName + "." ) )
+        break;
+
+      CallFunc( index );
+    }
+  }
+
+  inline int zCParser::GetEventIndex( const zSTRING& eventName ) {
+    int index = GetIndex( "EVENT." + eventName + ".START" );
+    return index;
+  }
 
 } // namespace Gothic_I_Classic
 

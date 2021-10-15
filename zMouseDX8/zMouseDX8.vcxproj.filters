@@ -52,6 +52,12 @@
     <Filter Include="Plugin\Workspace\Interface">
       <UniqueIdentifier>{e7225be9-bd30-470d-a48e-b1f831783398}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Plugin\MouseState">
+      <UniqueIdentifier>{14fc9753-24f4-405b-90ca-3e7ff9934971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugin\Wrapper">
+      <UniqueIdentifier>{3f33b7f9-1f89-43a6-b557-d8281802d753}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ZenGin\Gothic_I_Classic\staticDef_Ver0.cpp">
@@ -2602,6 +2608,33 @@
     </ClInclude>
     <ClInclude Include="UnionAfx.h">
       <Filter>Plugin\System</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseState\MouseState.h">
+      <Filter>Plugin\MouseState</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseState\MouseState.cpp">
+      <Filter>Plugin\MouseState</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper_AxisOnly.cpp">
+      <Filter>Plugin\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper.h">
+      <Filter>Plugin\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper.cpp">
+      <Filter>Plugin\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper_Init.cpp">
+      <Filter>Plugin\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper_Steam.cpp">
+      <Filter>Plugin\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Wrapper_Raw.cpp">
+      <Filter>Plugin\Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.cpp">
+      <Filter>Plugin\Workspace\Plugin</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

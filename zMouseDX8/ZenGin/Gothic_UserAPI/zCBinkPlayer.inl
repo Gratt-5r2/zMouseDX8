@@ -3,3 +3,4 @@
 // User API for zCBinkPlayer
 // Add your methods here
 
+int PlayFrame_Union();

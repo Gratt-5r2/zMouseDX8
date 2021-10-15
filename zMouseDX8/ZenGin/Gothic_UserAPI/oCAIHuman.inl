@@ -3,3 +3,5 @@
 // User API for oCAIHuman
 // Add your methods here
 
+void PC_Turnings_Union( int forceRotation );
+void PC_Diving_Union();
