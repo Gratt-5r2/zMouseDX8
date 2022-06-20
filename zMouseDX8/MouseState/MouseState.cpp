@@ -63,6 +63,8 @@ namespace GOTHIC_ENGINE {
     x = 0.0f;
     y = 0.0f;
     z = 0.0f;
+    mouseState.xpos = 0;
+    mouseState.ypos = 0;
   }
 
 

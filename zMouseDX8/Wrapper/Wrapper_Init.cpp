@@ -165,7 +165,11 @@ namespace GOTHIC_ENGINE {
     DisableAcquire();
     Union.GetUnionOption().Read( focusInteruptTimeF,   "MOUSE", "FixTargetDelay",    0.5f );
     Union.GetUnionOption().Read( forceMouseControl,    "MOUSE", "ForceMouseControl", false );
+#if False
     Union.GetUnionOption().Read( onlyAxis,             "MOUSE", "OnlyAxisMode",      true );
+#else
+    onlyAxis = false;
+#endif
     Union.GetUnionOption().Read( NoDirectXModeEnabled, "MOUSE", "NoDirectXAxisMode", false );
 
     focusInteruptTime = (int)(focusInteruptTimeF * 1000.0f);
@@ -181,6 +185,7 @@ namespace GOTHIC_ENGINE {
     }
 
     if( NoDirectXModeEnabled ) {
+      ShowCursor( False );
       TCursorTracker::GetInstance().Init();
       smoothMouseState.OnInit();
       Hook_UpdateMouse_RawMode.Commit();
@@ -198,7 +203,7 @@ namespace GOTHIC_ENGINE {
   }
   
 #if ENGINE <= Engine_G1A
-  HOOK Hook_zCInput_Win32_SetState PATCH_IF( &zCInput_Win32::SetState, &zCInput_Win32::SetState_Union, ReadOption<bool>( "PARAMETERS", "Gothic2_Control" ) );
+  HOOK Hook_zCInput_Win32_SetState PATCH_IF( &zCInput_Win32::SetState, &zCInput_Win32::SetState_Union, CHECK_THIS_ENGINE && ReadOption<bool>( "PARAMETERS", "Gothic2_Control" ) );
 
   bool ExpectedDialog() {
     if( !player )
@@ -223,5 +228,24 @@ namespace GOTHIC_ENGINE {
 
     return THISCALL( Hook_zCInput_Win32_SetState )(logicalID, state);
   };
+#endif
+
+  // GFA
+#if ENGINE == Engine_G1 || ENGINE == Engine_G2A
+  void NinjaGFAHelper() {
+    if( player ) {
+#if ENGINE == Engine_G1
+      _asm {
+        mov eax, 0x004C8062
+        call eax
+      }
+#elif ENGINE == Engine_G2A
+      _asm {
+        mov eax, 0x004D40FB
+        call eax
+      }
+#endif
+    }
+  }
 #endif
 }

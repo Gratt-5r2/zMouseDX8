@@ -119,7 +119,7 @@ namespace GOTHIC_ENGINE {
     zinput->SetState( GAME_ACTION, mouseState.buttonPressedLeft );
     zinput->SetState( GAME_SMOVE,  mouseState.buttonPressedRight );
 #endif
-    
+
 #if ENGINE >= Engine_G2
     bool_t idle = abs( smoothMouseState.GetX() ) <= 0.0001f ? True : False;
     static Timer idleTimer;
@@ -137,5 +137,10 @@ namespace GOTHIC_ENGINE {
 
     if( UseIdleDeviceData )
       zinput->ClearKeyBuffer();
+
+    // GFA
+#if ENGINE == Engine_G1 || ENGINE == Engine_G2A
+    NinjaGFAHelper();
+#endif
   }
 }

@@ -76,4 +76,8 @@ namespace GOTHIC_ENGINE {
   private:
     TCursorTracker();
   };
+
+#if ENGINE == Engine_G1 || ENGINE == Engine_G2A
+  void NinjaGFAHelper();
+#endif
 }

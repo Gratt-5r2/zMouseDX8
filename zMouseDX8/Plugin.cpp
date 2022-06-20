@@ -6,7 +6,8 @@ namespace GOTHIC_ENGINE {
   
 
   void Game_Entry() {
-    while( ShowCursor( False ) >= -1 );
+    //while( ShowCursor( False ) >= -1 );
+    ShowCursor( False );
   }
 
   void Game_Init() {
@@ -27,27 +28,28 @@ namespace GOTHIC_ENGINE {
   void UpdateMouseFocus( const bool& emergencyStopInput = false ) {
     if( forceMouseControl && !emergencyStopInput )
       return;
-
+    
     static Timer timer;
     timer.ClearUnused();
-
+    
     static bool windowIsActive = false;
     if( GetForegroundWindow() == hWndApp && !emergencyStopInput ) {
       if( !windowIsActive ) {
+        // Ivk_SetAcquire();
         if( m_lpDIMouse )
           m_lpDIMouse->Acquire();
-
-        Ivk_SetAcquire();
+    
         SetMouseDeviceEnabled( true );
         windowIsActive = true;
+        // cmd << "Restore input" << endl;
         TInputDeviceState::GetInstance().RestoreInput();
-
+    
         if( NoDirectXModeEnabled ) {
           Hook_SetCursorPos( VidCenterX, VidCenterY );
           while( ShowCursor( False ) >= 0 );
         }
       }
-
+    
       if( UseIdleDeviceData && timer[0u].Await( 250 ) ) {
         timer[0u].Delete();
         UseIdleDeviceData = false;
@@ -57,12 +59,13 @@ namespace GOTHIC_ENGINE {
       if( windowIsActive ) {
         if( m_lpDIMouse )
           m_lpDIMouse->Unacquire();
-
+    
         SetMouseDeviceEnabled( false );
         windowIsActive = false;
+        // cmd << "Stop imput" << endl;
         TInputDeviceState::GetInstance().StopInput();
         UseIdleDeviceData = true;
-
+    
         if( NoDirectXModeEnabled ) {
           while( ShowCursor( True ) < 0 );
         }
@@ -70,8 +73,8 @@ namespace GOTHIC_ENGINE {
     }
   }
 
-  HOOK Hook_zCBinkPlayer_PlayFrame PATCH( &zCBinkPlayer::PlayFrame, &zCBinkPlayer::PlayFrame_Union );
-
+  HOOK Hook_zCBinkPlayer_PlayFrame PATCH_IF( &zCBinkPlayer::PlayFrame, &zCBinkPlayer::PlayFrame_Union, CHECK_THIS_ENGINE );
+  
   int zCBinkPlayer::PlayFrame_Union() {
     UpdateMouseFocus();
     return THISCALL( Hook_zCBinkPlayer_PlayFrame )();

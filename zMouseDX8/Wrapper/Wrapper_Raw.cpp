@@ -9,7 +9,7 @@ namespace GOTHIC_ENGINE {
 
   static const int VidCenterX   = VID_MAX_XDIM / 2;
   static const int VidCenterY   = VID_MAX_YDIM / 2;
-  static bool NoDirectXAxisMode = ReadOption<bool>( "MOUSE", "NoDirectXAxisMode" );
+  static bool NoDirectXAxisMode = CHECK_THIS_ENGINE && ReadOption<bool>( "MOUSE", "NoDirectXAxisMode" );
 
   TCursorTracker::TCursorTracker() {
     AverageX = 0;
@@ -121,6 +121,33 @@ namespace GOTHIC_ENGINE {
   }
 
 
+#if ENGINE == Engine_G1 || ENGINE == Engine_G2A
+  // GFA
+  int GFA_GetMotionX() {
+    static float accf = 0.0f;
+    accf += SafeDiv(smoothMouseState.GetX(), ztimer->frameTimeFloat) * 2.0f;
+
+    float accf_u = abs( accf );
+    if( accf_u <= 1.0f ) {
+      return 0;
+    }
+
+    float accf_floor = floor( accf_u );
+    int motion = (int)accf_floor;
+    accf_u -= accf_floor;
+
+    if( accf < 0.0f ) {
+      accf = -accf_u;
+      return -motion;
+    }
+    else {
+      accf = accf_u;
+      return motion;
+    }
+  }
+#endif
+
+
   void UpdateMouse_RawMode() {
     static bool newMouseEnabled = true;
     bool mouseEnabled = zinput->GetDeviceEnabled( zINPUT_MOUSE );
@@ -139,7 +166,6 @@ namespace GOTHIC_ENGINE {
 
     smoothMouseState.Reset();
 
-    Hook_UpdateMouse_RawMode();
     if( !UseIdleDeviceData ) {
       int x, y;
       TCursorTracker::GetInstance().GetCursorPos( x, y );
@@ -150,6 +176,20 @@ namespace GOTHIC_ENGINE {
     }
     else
       zinput->ClearKeyBuffer();
+    
+    // GFA
+#if ENGINE == Engine_G1 || ENGINE == Engine_G2A
+    if( player ) {
+      int GFA_motion = GFA_GetMotionX();
+#if ENGINE == Engine_G1
+      *(int*)0x0086CCAC = GFA_motion;
+#elif ENGINE == Engine_G2A
+      *(int*)0x008D165C = GFA_motion;
+#endif
+    }
+#endif
+    
+    Hook_UpdateMouse_RawMode();
   }
 
   bool IsMouseDeviceEnabled() {
@@ -195,14 +235,19 @@ namespace GOTHIC_ENGINE {
 
   HOOK Hook_oCAIHuman_PC_Turnings PATCH_IF( &oCAIHuman::PC_Turnings, &oCAIHuman::PC_Turnings_Union, NoDirectXAxisMode );
 
+  bool IsGFAEnabled() {
+
+  }
+
   void oCAIHuman::PC_Turnings_Union( int forceRotation ) {
     if( !Pressed( GAME_LEFT ) && !Pressed( GAME_RIGHT ) ) {
       PUSHFRAMETIME(2.0f);
       THISCALL( Hook_oCAIHuman_PC_Turnings )(forceRotation);
       POPFRAMETIME;
     }
-    else
-      THISCALL( Hook_oCAIHuman_PC_Turnings )(forceRotation);
+    else {
+      THISCALL(Hook_oCAIHuman_PC_Turnings)(forceRotation);
+    }
   };
 
 
